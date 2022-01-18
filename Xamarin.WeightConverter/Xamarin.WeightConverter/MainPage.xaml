@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin.WeightConverter.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="CONVERSIÓN DE UNIDAD DE PESO" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="2"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            
+            <Entry Grid.Column="0" Grid.Row="0" x:Name="poundsText" Margin="10" Text="0" HorizontalTextAlignment="Center" WidthRequest="100" TextChanged="Entry_PoundsChanged" Focused="weightText_Focused" />
+            <Entry Grid.Column="2" Grid.Row="0" x:Name="kilosText"  Margin="10" Text="0" HorizontalTextAlignment="Center" WidthRequest="100" TextChanged="Entry_KilosChanged" Focused="weightText_Focused" />
+
+            <Label Grid.Column="0" Grid.Row="1" Margin="10" Text="Libras" HorizontalTextAlignment="Center" WidthRequest="100" />
+            <Label Grid.Column="2" Grid.Row="1" Margin="10" Text="Kilos" HorizontalTextAlignment="Center" WidthRequest="100" />
+        </Grid>
+        <Button Text="CERRAR" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>
