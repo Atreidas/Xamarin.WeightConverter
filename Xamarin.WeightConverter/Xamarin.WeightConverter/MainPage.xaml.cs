@@ -48,8 +48,7 @@ namespace Xamarin.WeightConverter
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
-            //Process.GetCurrentProcess().CloseMainWindow();
+            System.Environment.Exit(0);        
         }
     }
 }
